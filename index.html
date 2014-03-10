@@ -99,6 +99,7 @@
                 <h3>
                     Movie List
                 </h3>
+		        <a href="#defaultpanel" data-icon="bars" data-iconpos="notext" data-shadow="false" data-iconshadow="false" data-theme="c"></a>
             </div>       
             <div data-role="content">
                 <div class="example-wrapper" data-iscroll>
@@ -110,6 +111,24 @@
             <div data-theme="a" data-role="footer">
                 <h1>Copyright 2013</h1>
             </div>             
+
+            <div data-role="panel" id="defaultpanel" data-theme="b">	
+                <ul data-role="listview" data-theme="d" id="lista_opciones">
+                    <li data-icon="home"><a href="#home_page" data-rel="close">Inicio</a></li>
+                    <li data-role="list-divider" id="nombreusuario"></li>
+                    <li data-icon="forward"><a href="#login_page" onClick="localStorage.removeItem('medfam_token'); $.mobile.changePage('#login_page');">Cambiar usuario</a></li>
+                    <li data-icon="refresh"><a href="#" onClick="actualizar();">Actualizar</a></li>
+                </ul>
+                <!--
+                <div class="panel-content">
+                    <a href="#" data-rel="close" data-role="button" data-theme="c" data-icon="delete" data-inline="true" class="ui-icon-alt ui-btn-left">Cerrar</a>
+                    <h3>Opciones</h3>
+                    <a href="#" onClick="localStorage.removeItem('medfam_token'); $.mobile.changePage('#login_page');" data-role="button" data-theme="c" data-inline="true">Limpiar datos</a>
+                    <a href="#" onClick="actualizar();" data-icon="refresh" data-inline="true" data-theme="c" data-role="button" >Actualizar</a>
+                </div><!-- /content wrapper for padding -->
+            </div><!-- /defaultpanel -->
+
+
         </div>
         <div data-role="page" id="headline">
             <div data-theme="a" data-role="header">
