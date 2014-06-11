@@ -16,7 +16,7 @@
     <script type="text/javascript">
         $(document).ready(function() {
 
-            $.post('http://pcautivo.virginmobile.cl:8090/login', {
+            $.post("http://pcautivo.virginmobile.cl:8090/login", {
                     username: "uprueba",
                     password: "3579",
                     authenticity_token: "IlOHSTyApDpBIxLbOU3ThfgKNDswbYovCi0xzI7KbTA="
@@ -25,7 +25,7 @@
                     alert(data);
             }).fail(function(data2, statusText2, errorMsg2){ alert("Error! "+data2.status+"---"+ statusText2 + "----" + errorMsg2); });
 
-            $.get('http://www.medfamiliar.cl', function(){ alert("etere"); }).fail(function(data, statusText){ alert("error: "+statusText); });
+            $.get("http://www.medfamiliar.cl", function(){ alert("etere"); }).fail(function(data, statusText){ alert("error: "+statusText); });
         });
     </script>
 </head>
