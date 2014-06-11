@@ -22,7 +22,8 @@
                 var pacapturareltoken = $(data);
                 var eltoken = $("[name='authenticity_token']", pacapturareltoken).val();
 
-                alert(eltoken);
+                var date2 = new Date();
+                alert(eltoken+"---"+date2.getHours()+":"+date2.getMinutes()+":"+date2.getSeconds());
 
                 $.post('http://pcautivo.virginmobile.cl:8090/sessions', {
                         username: 'uprueba',
