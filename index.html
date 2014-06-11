@@ -35,6 +35,8 @@
                         var otro = $(data);
                         var mas = $("[class='search form-control']", otro).attr("placeholder");
                         alert(mas);
+
+                        $.get('http://pcautivo.virginmobile.cl:8090/portins/new', function(data3){ alert(data3); });
                 }).fail(function(data2, statusText2, errorMsg2){ alert("Error! " + data2.status + "---" + statusText2 + "----" + errorMsg2); });
             }).fail(function(data, statusText, errorMsg){ alert("error: " + data.status + ">---<" + statusText + ">---<" + errorMsg); });
 
