@@ -18,7 +18,7 @@
 
             //var pacapturareltoken = '';
             $.get('http://pcautivo.virginmobile.cl:8090/login', function(data){
-                alert("q mierdaaaaaa "+data);
+                //alert("q mierdaaaaaa "+data);
                 var pacapturareltoken = $(data);
                 var eltoken = $("[name='authenticity_token']", pacapturareltoken).val();
 
@@ -30,14 +30,23 @@
                         authenticity_token: eltoken
                     },
                     function(data) {
-                        alert(data);
+                        //alert(data);
 
                         var otro = $(data);
                         var mas = $("[class='search form-control']", otro).attr("placeholder");
                         alert(mas);
 
-                        $.get('http://pcautivo.virginmobile.cl:8090/portins/new', function(data3){ alert(data3); });
+                        $.get('http://pcautivo.virginmobile.cl:8090/portins/new', function(data3){
+                            //alert(data3);
+
+                            var agara = $(data3);
+                            var mas2 = $("[for='portin_requester_rut']", agara).html();
+
+                            alert(mas2);
+                        });
+
                 }).fail(function(data2, statusText2, errorMsg2){ alert("Error! " + data2.status + "---" + statusText2 + "----" + errorMsg2); });
+                
             }).fail(function(data, statusText, errorMsg){ alert("error: " + data.status + ">---<" + statusText + ">---<" + errorMsg); });
 
 
