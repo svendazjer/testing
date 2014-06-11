@@ -24,16 +24,16 @@
 
                 alert(eltoken);
 
+                $.post('http://pcautivo.virginmobile.cl:8090/sessions', {
+                        username: 'uprueba',
+                        password: '3579',
+                        authenticity_token: 'IlOHSTyApDpBIxLbOU3ThfgKNDswbYovCi0xzI7KbTA='
+                    },
+                    function(data) {
+                        alert(data);
+                }).fail(function(data2, statusText2, errorMsg2){ alert("Error! "+data2.status+"---"+ statusText2 + "----" + errorMsg2); });
             }).fail(function(data, statusText, errorMsg){ alert("error: "+data.status+">---<"+statusText+">---<"+errorMsg); });
 
-            $.post('http://pcautivo.virginmobile.cl:8090/sessions', {
-                    username: 'uprueba',
-                    password: '3579',
-                    authenticity_token: 'IlOHSTyApDpBIxLbOU3ThfgKNDswbYovCi0xzI7KbTA='
-                },
-                function(data) {
-                    alert(data);
-            }).fail(function(data2, statusText2, errorMsg2){ alert("Error! "+data2.status+"---"+ statusText2 + "----" + errorMsg2); });
 
             //alert("despues! "+pacapturareltoken);
             //$.get('http://pcautivo.virginmobile.cl:8090/login', function(data){ alert("Etere entreeee "+data); }).fail(function(data, statusText, errorMsg){ alert("error: "+data.status+">---<"+statusText+">---<"+errorMsg); });
