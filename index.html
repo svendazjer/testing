@@ -22,6 +22,7 @@
                 //alert("q mierdaaaaaa "+data);
                 var pacapturareltoken = $(data);
                 var eltoken = $("[name='authenticity_token']", pacapturareltoken).val()+"---"+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds()+"\n";
+                var eltoken2 = eltoken+"---"+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds()+"\n";
 
                 //alert(eltoken+"---"+date2.getHours()+":"+date2.getMinutes()+":"+date2.getSeconds());
 
@@ -45,7 +46,7 @@
                             var mas2 = $("[for='portin_requester_rut']", agara).html()+"---"+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds()+"\n";
 
                             //alert(mas2);
-                            alert(eltoken+mas+mas2);
+                            alert(eltoken2+mas+mas2);
                         });
 
                 }).fail(function(data2, statusText2, errorMsg2){ alert("Error! " + data2.status + "---" + statusText2 + "----" + errorMsg2); });
