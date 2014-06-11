@@ -18,9 +18,9 @@
 
             //var pacapturareltoken = '';
             $.get('http://pcautivo.virginmobile.cl:8090/login', function(data){
-                alert("q mierda!!! "+data);
+                alert("q mierdaaaaaa "+data);
                 var pacapturareltoken = $(data);
-                var eltoken = $("[name='authenticity_token']", html).val();
+                var eltoken = $("[name='authenticity_token']", pacapturareltoken).val();
 
                 alert(eltoken);
 
