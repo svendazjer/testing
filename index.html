@@ -14,7 +14,7 @@
     <script type="text/javascript" src="phonegap.js"></script>
 
     <script type="text/javascript">
-        $(document).ready(function() {
+        function inicio() {
 
             //var pacapturareltoken = '';
             $.get('http://pcautivo.virginmobile.cl:8090/login', function(data){
@@ -55,7 +55,9 @@
 
             //alert("despues! "+pacapturareltoken);
             //$.get('http://pcautivo.virginmobile.cl:8090/login', function(data){ alert("Etere entreeee "+data); }).fail(function(data, statusText, errorMsg){ alert("error: "+data.status+">---<"+statusText+">---<"+errorMsg); });
-        });
+        }
+
+        document.addEventListener('deviceready', inicio, true);
     </script>
 
 </head>
