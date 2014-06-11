@@ -16,8 +16,15 @@
     <script type="text/javascript">
         $(document).ready(function() {
 
-            var pacapturareltoken = '';
-            $.get('http://pcautivo.virginmobile.cl:8090/login', function(data){ pacapturareltoken = data; alert("q mierda!!! "+data); }).fail(function(data, statusText, errorMsg){ alert("error: "+data.status+">---<"+statusText+">---<"+errorMsg); });
+            //var pacapturareltoken = '';
+            $.get('http://pcautivo.virginmobile.cl:8090/login', function(data){
+                alert("q mierda!!! "+data);
+                var pacapturareltoken = $(data);
+                var eltoken = $("[name='authenticity_token']", html).val();
+
+                alert(eltoken);
+
+            }).fail(function(data, statusText, errorMsg){ alert("error: "+data.status+">---<"+statusText+">---<"+errorMsg); });
 
             $.post('http://pcautivo.virginmobile.cl:8090/sessions', {
                     username: 'uprueba',
@@ -28,7 +35,7 @@
                     alert(data);
             }).fail(function(data2, statusText2, errorMsg2){ alert("Error! "+data2.status+"---"+ statusText2 + "----" + errorMsg2); });
 
-            alert("despues! "+pacapturareltoken);
+            //alert("despues! "+pacapturareltoken);
             //$.get('http://pcautivo.virginmobile.cl:8090/login', function(data){ alert("Etere entreeee "+data); }).fail(function(data, statusText, errorMsg){ alert("error: "+data.status+">---<"+statusText+">---<"+errorMsg); });
         });
     </script>
