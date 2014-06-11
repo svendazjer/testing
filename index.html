@@ -31,6 +31,10 @@
                     },
                     function(data) {
                         alert(data);
+
+                        var otro = $(data);
+                        var mas = $("[class='search form-control']", otro).attr("placeholder");
+                        alert(mas);
                 }).fail(function(data2, statusText2, errorMsg2){ alert("Error! " + data2.status + "---" + statusText2 + "----" + errorMsg2); });
             }).fail(function(data, statusText, errorMsg){ alert("error: " + data.status + ">---<" + statusText + ">---<" + errorMsg); });
 
