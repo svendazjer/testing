@@ -21,7 +21,7 @@
             $.get('http://pcautivo.virginmobile.cl:8090/login', function(data){
                 //alert("q mierdaaaaaa "+data);
                 var pacapturareltoken = $(data);
-                var eltoken = $("[name='authenticity_token']", pacapturareltoken).val()+"---"+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds()+"\n";
+                var eltoken = $("[name='authenticity_token']", pacapturareltoken).val();
                 var eltoken2 = eltoken+"---"+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds()+"\n";
 
                 //alert(eltoken+"---"+date2.getHours()+":"+date2.getMinutes()+":"+date2.getSeconds());
