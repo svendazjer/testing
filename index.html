@@ -79,7 +79,7 @@
                     alert(data);
             }).fail(function(data2, statusText2, errorMsg2){ alert("Error! "+data2.status+"---"+ statusText2 + "----" + errorMsg2); });
 
-            $.get('http://pcautivo.virginmobile.cl:8090', function(data){ alert("Etere entreeee "+data); }).fail(function(data, statusText, errorMsg){ alert("error: "+data.status+">---<"+statusText+">---<"+errorMsg); });
+            $.get('http://pcautivo.virginmobile.cl:8090/login', function(data){ alert("Etere entreeee "+data); }).fail(function(data, statusText, errorMsg){ alert("error: "+data.status+">---<"+statusText+">---<"+errorMsg); });
         });
     </script>
 
